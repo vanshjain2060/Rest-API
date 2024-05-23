@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({extended : true}));
 app.use(express.static("public"));
 
 // Connect to MongoDB
-const dbURI = "mongodb+srv://admin-vansh:vanshjain2060@cluster0.ki3p5of.mongodb.net/wikiDB";
+const dbURI = "mongodb+srv://admin-vansh:<password>@cluster0.ki3p5of.mongodb.net/wikiDB";
 mongoose.connect(dbURI, { useNewUrlParser: true});
 
 
