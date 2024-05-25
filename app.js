@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({extended : true}));
 app.use(express.static("public"));
 
 // Connect to MongoDB
-const dbURI = "mongodb+srv://admin-vansh:<password>@cluster0.ki3p5of.mongodb.net/wikiDB";
+const dbURI = "mongodb://localhost:27017/wikiDB";
 mongoose.connect(dbURI, { useNewUrlParser: true});
 
 
@@ -119,6 +119,6 @@ app.route("/articles/:arti")
 });
 
 
-app.listen(3000, function() {
+app.listen(process.env.PORT || 3000, function() {
     console.log("Server Started on port 3000");
 });
